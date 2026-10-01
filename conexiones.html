@@ -21,14 +21,145 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="mapa.html">Mapa</a></li>
                 <li><a href="chat.html">Chat</a></li>
-                <li><a href="#" class="active">Conexiones</a></li>
+                <li><a href="conexiones.html" class="active">Conexiones</a></li>
                 <li><a href="cuenta.html" class="nav-cta">Cuenta de prueba</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        
+    <main class="connections-page">
+        <section class="connections-heading">
+            <div>
+                <span class="connections-eyebrow">EHU · Campus de Leioa</span>
+                <h1>Encuentra tu gente</h1>
+                <p>Conecta para estudiar, compartir coche o encontrar piso.</p>
+            </div>
+            <div class="student-context">
+                <span class="context-avatar">AM</span>
+                <span>Biología · 3.º</span>
+            </div>
+        </section>
+
+        <div class="connections-layout">
+            <aside class="connections-filters" aria-label="Filtros de búsqueda">
+                <div class="filters-header">
+                    <div>
+                        <span class="filter-kicker">Afinamos la búsqueda</span>
+                        <h2>Filtros</h2>
+                    </div>
+                    <button class="reset-filters" id="reset-filters" type="button">Limpiar</button>
+                </div>
+
+                <label class="filter-search">
+                    <span aria-hidden="true">⌕</span>
+                    <input id="profile-search" type="search" placeholder="Nombre o palabra clave" aria-label="Buscar nombre o palabra clave">
+                </label>
+
+                <fieldset class="filter-group">
+                    <legend>Intereses</legend>
+                    <label class="filter-option"><input type="checkbox" value="study"><span>Grupo de estudio</span><small>Exámenes y apuntes</small></label>
+                    <label class="filter-option"><input type="checkbox" value="gaming"><span>Gaming · Minecraft</span><small>Partidas y comunidad</small></label>
+                    <label class="filter-option"><input type="checkbox" value="roommates"><span>Compañeros de piso</span><small>Buscar alojamiento</small></label>
+                    <label class="filter-option"><input type="checkbox" value="mentor"><span>Tutorías y mentoría</span><small>Aprender entre cursos</small></label>
+                </fieldset>
+
+                <fieldset class="filter-group transport-group">
+                    <legend>Compartir coche</legend>
+                    <label class="filter-option compact-option"><input type="checkbox" value="car-bilbao"><span>Desde Bilbao</span></label>
+                    <label class="filter-option compact-option"><input type="checkbox" value="car-getxo"><span>Desde Getxo</span></label>
+                </fieldset>
+
+                <div class="filter-select-group">
+                    <label for="degree-filter">Titulación</label>
+                    <select id="degree-filter">
+                        <option value="all">Todas las titulaciones</option>
+                        <option value="biologia">Mi titulación · Biología</option>
+                        <option value="informatica">Ingeniería Informática</option>
+                        <option value="psicologia">Grado en Psicología</option>
+                    </select>
+                </div>
+
+                <div class="filter-select-group">
+                    <label for="year-filter">Curso y mentoría</label>
+                    <select id="year-filter">
+                        <option value="all">Cualquier curso</option>
+                        <option value="same">Mi curso · 3.º</option>
+                        <option value="early">1.º-2.º · buscan mentoría</option>
+                        <option value="upper">3.º-4.º · ofrecen mentoría</option>
+                    </select>
+                </div>
+
+                <p class="privacy-note"><span aria-hidden="true">●</span> Solo perfiles de la comunidad EHU</p>
+            </aside>
+
+            <section class="connections-results" aria-labelledby="results-title">
+                <div class="results-header">
+                    <div>
+                        <span class="results-kicker">Personas cerca de ti</span>
+                        <h2 id="results-title">Conexiones para ti</h2>
+                    </div>
+                    <span class="results-count" id="results-count" aria-live="polite">3 perfiles</span>
+                </div>
+
+                <div class="profile-grid" id="profile-grid">
+                    <article class="connection-card" data-degree="biologia" data-year="3" data-interests="study car-getxo mentor" data-search="June Lasa biología genética estudio apuntes exámenes compartir coche Getxo">
+                        <div class="profile-photo photo-june">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=720&amp;q=85" alt="Retrato de June, estudiante de Biología">
+                            <span class="profile-location">Leioa · a 2 km</span>
+                            <span class="photo-index">01 / 03</span>
+                        </div>
+                        <div class="connection-card-body">
+                            <div class="profile-name-row"><h3>June Lasa <span>21</span></h3><span class="profile-online"><i></i> Activa</span></div>
+                            <p class="profile-degree">Biología <span>·</span> 3.º curso</p>
+                            <p class="profile-bio">Me gusta estudiar en grupo, compartir resúmenes de genética y ayudar a quienes empiezan. Suelo venir desde Getxo.</p>
+                            <div class="interest-tags"><span>Grupo de estudio</span><span>Coche · Getxo</span><span>Mentoría</span></div>
+                            <div class="profile-actions">
+                                <button class="pass-button" type="button" aria-label="Pasar el perfil de June">×</button>
+                                <button class="connect-button" type="button"><span aria-hidden="true">+</span> Conectar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="connection-card" data-degree="informatica" data-year="2" data-interests="gaming car-bilbao study mentor" data-search="Mikel Aranburu ingeniería informática Minecraft gaming coche Bilbao estudio mentoría">
+                        <div class="profile-photo photo-mikel">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=720&amp;q=85" alt="Retrato de Mikel, estudiante de Ingeniería Informática">
+                            <span class="profile-location">Leioa · a 4 km</span>
+                            <span class="photo-index">02 / 03</span>
+                        </div>
+                        <div class="connection-card-body">
+                            <div class="profile-name-row"><h3>Mikel Aranburu <span>20</span></h3><span class="profile-online"><i></i> Activo</span></div>
+                            <p class="profile-degree">Ingeniería Informática <span>·</span> 2.º curso</p>
+                            <p class="profile-bio">Minecraft, juegos indie y café antes de clase. Busco alguien de cursos superiores para practicar programación.</p>
+                            <div class="interest-tags"><span>Gaming · Minecraft</span><span>Coche · Bilbao</span><span>Busco mentoría</span></div>
+                            <div class="profile-actions">
+                                <button class="pass-button" type="button" aria-label="Pasar el perfil de Mikel">×</button>
+                                <button class="connect-button" type="button"><span aria-hidden="true">+</span> Conectar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="connection-card" data-degree="biologia" data-year="4" data-interests="study roommates mentor car-bilbao" data-search="Nora Etxeberria biología tutoría mentoría piso compañeros exámenes Bilbao">
+                        <div class="profile-photo photo-nora">
+                            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=crop&amp;w=720&amp;q=85" alt="Retrato de Nora, estudiante de cuarto de Biología">
+                            <span class="profile-location">Leioa · a 1 km</span>
+                            <span class="photo-index">03 / 03</span>
+                        </div>
+                        <div class="connection-card-body">
+                            <div class="profile-name-row"><h3>Nora Etxeberria <span>22</span></h3><span class="profile-online"><i></i> Activa</span></div>
+                            <p class="profile-degree">Biología <span>·</span> 4.º curso</p>
+                            <p class="profile-bio">Puedo echar una mano con las asignaturas de primero. También busco piso para el próximo curso.</p>
+                            <div class="interest-tags"><span>Mentoría</span><span>Compañeros de piso</span><span>Biología</span></div>
+                            <div class="profile-actions">
+                                <button class="pass-button" type="button" aria-label="Pasar el perfil de Nora">×</button>
+                                <button class="connect-button" type="button"><span aria-hidden="true">+</span> Conectar</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <p class="empty-results" id="empty-results" hidden>No hay perfiles con esa combinación de filtros. Prueba a ampliar la búsqueda.</p>
+                <p class="demo-disclaimer">Perfiles de ejemplo · La conexión es una demostración</p>
+            </section>
+        </div>
     </main>
 
     <!-- FOOTER -->
@@ -38,6 +169,68 @@
         </div>
         <p>&copy; 2026 EHU · StormGamesStudios</p>
     </footer>
-    
+    <script>
+        const profileCards = [...document.querySelectorAll('.connection-card')];
+        const interestFilters = [...document.querySelectorAll('.filter-option input[type="checkbox"]')];
+        const degreeFilter = document.querySelector('#degree-filter');
+        const yearFilter = document.querySelector('#year-filter');
+        const searchInput = document.querySelector('#profile-search');
+        const resultsCount = document.querySelector('#results-count');
+        const emptyResults = document.querySelector('#empty-results');
+
+        function updateProfiles() {
+            const selectedInterests = interestFilters.filter((filter) => filter.checked).map((filter) => filter.value);
+            const degree = degreeFilter.value;
+            const year = yearFilter.value;
+            const search = searchInput.value.trim().toLocaleLowerCase('es');
+            let visibleCount = 0;
+
+            profileCards.forEach((card) => {
+                const interests = card.dataset.interests.split(' ');
+                const matchesInterest = selectedInterests.length === 0 || selectedInterests.some((interest) => interests.includes(interest));
+                const matchesDegree = degree === 'all' || card.dataset.degree === degree;
+                const matchesYear = year === 'all'
+                    || (year === 'same' && card.dataset.year === '3')
+                    || (year === 'early' && Number(card.dataset.year) <= 2)
+                    || (year === 'upper' && Number(card.dataset.year) >= 3);
+                const matchesSearch = !search || card.dataset.search.toLocaleLowerCase('es').includes(search);
+                const isVisible = matchesInterest && matchesDegree && matchesYear && matchesSearch && !card.classList.contains('is-passed');
+
+                card.hidden = !isVisible;
+                if (isVisible) visibleCount += 1;
+            });
+
+            resultsCount.textContent = `${visibleCount} ${visibleCount === 1 ? 'perfil' : 'perfiles'}`;
+            emptyResults.hidden = visibleCount !== 0;
+        }
+
+        interestFilters.forEach((filter) => filter.addEventListener('change', updateProfiles));
+        degreeFilter.addEventListener('change', updateProfiles);
+        yearFilter.addEventListener('change', updateProfiles);
+        searchInput.addEventListener('input', updateProfiles);
+
+        document.querySelector('#reset-filters').addEventListener('click', () => {
+            interestFilters.forEach((filter) => { filter.checked = false; });
+            degreeFilter.value = 'all';
+            yearFilter.value = 'all';
+            searchInput.value = '';
+            profileCards.forEach((card) => card.classList.remove('is-passed'));
+            updateProfiles();
+        });
+
+        profileCards.forEach((card) => {
+            card.querySelector('.connect-button').addEventListener('click', (event) => {
+                const button = event.currentTarget;
+                button.innerHTML = '<span aria-hidden="true">✓</span> Solicitud enviada';
+                button.classList.add('is-connected');
+                button.disabled = true;
+            });
+
+            card.querySelector('.pass-button').addEventListener('click', () => {
+                card.classList.add('is-passed');
+                updateProfiles();
+            });
+        });
+    </script>
 </body>
 </html>
