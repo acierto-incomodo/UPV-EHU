@@ -630,48 +630,11 @@ footer p {
     }
 }
 
-/* ─── CHAT DEMO ────────────────────────────────────────────────────────────── */
+/* ─── CHAT ─────────────────────────────────────────────────────────────────── */
 .chat-page {
     min-height: calc(100vh - var(--header-h));
-    padding: 38px 6% 64px;
+    padding: 28px 6% 48px;
     background: radial-gradient(ellipse at 88% 0%, #34463233 0%, transparent 34%);
-}
-
-.chat-titlebar {
-    max-width: 1280px;
-    margin: 0 auto 24px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.chat-eyebrow {
-    display: block;
-    margin-bottom: 7px;
-    color: #90bd8c;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.chat-titlebar h1 {
-    margin-bottom: 5px;
-    font-size: 2rem;
-}
-
-.chat-titlebar p {
-    font-size: 13px;
-}
-
-.chat-demo-label {
-    padding: 7px 10px;
-    border: 1px solid #ffffff18;
-    border-radius: var(--radius-sm);
-    color: var(--text-secondary);
-    font-size: 11px;
-    white-space: nowrap;
 }
 
 .chat-workspace {
@@ -1038,12 +1001,6 @@ footer p {
 }
 
 @media (max-width: 520px) {
-    .chat-titlebar {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 12px;
-    }
-
     .chat-workspace {
         min-height: 680px;
         grid-template-columns: 1fr;
