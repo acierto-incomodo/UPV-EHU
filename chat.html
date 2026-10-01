@@ -18,14 +18,102 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="mapa.html">Mapa</a></li>
-                <li><a href="#" class="active">Chat</a></li>
-                <li><a href="hacer-amigos.html">Haz amigos</a></li>
+                <li><a href="chat.html" class="active">Chat</a></li>
+                <li><a href="conexiones.html">Conexiones</a></li>
                 <li><a href="cuenta.html" class="nav-cta">Cuenta de prueba</a></li>
             </ul>
         </nav>
     </header>
+
+    <main class="chat-page">
+        <div class="chat-titlebar">
+            <div>
+                <span class="chat-eyebrow">Comunidad EHU · Leioa</span>
+                <h1>Mensajes</h1>
+                <p>Un espacio para conectar con estudiantes del campus.</p>
+            </div>
+            <span class="chat-demo-label">Vista de demostración</span>
+        </div>
+
+        <div class="chat-workspace">
+            <aside class="chat-sidebar" aria-label="Conversaciones">
+                <div class="chat-sidebar-heading">
+                    <h2>Conversaciones</h2>
+                    <span>3</span>
+                </div>
+                <label class="chat-search">
+                    <span aria-hidden="true">⌕</span>
+                    <input type="search" placeholder="Buscar conversación" aria-label="Buscar conversación">
+                </label>
+
+                <div class="conversation-list">
+                    <article class="conversation-item is-active" aria-current="true">
+                        <div class="chat-avatar avatar-green" aria-hidden="true">JL</div>
+                        <div class="conversation-copy">
+                            <div class="conversation-topline"><strong>June Lasa</strong><time>12:42</time></div>
+                            <p>¿Te viene bien en la biblioteca?</p>
+                        </div>
+                    </article>
+                    <article class="conversation-item">
+                        <div class="chat-avatar avatar-coral" aria-hidden="true">IM</div>
+                        <div class="conversation-copy">
+                            <div class="conversation-topline"><strong>Irati Mendia</strong><time>Ayer</time></div>
+                            <p>¡Gracias por pasarme los apuntes!</p>
+                        </div>
+                    </article>
+                    <article class="conversation-item">
+                        <div class="chat-avatar avatar-gold" aria-hidden="true">B3</div>
+                        <div class="conversation-copy">
+                            <div class="conversation-topline"><strong>Biología · 3.º curso</strong><time>Mar</time></div>
+                            <p>Unai: He subido el resumen al grupo</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="chat-campus-note">
+                    <span class="campus-note-dot"></span>
+                    Estudiantes del campus de Leioa
+                </div>
+            </aside>
+
+            <section class="chat-thread" aria-labelledby="conversation-title">
+                <div class="thread-header">
+                    <div class="chat-avatar avatar-green" aria-hidden="true">JL</div>
+                    <div class="thread-person">
+                        <h2 id="conversation-title">June Lasa</h2>
+                        <p><span class="online-dot"></span> En línea · Biología</p>
+                    </div>
+                    <span class="thread-campus">Campus de Leioa</span>
+                </div>
+
+                <div class="message-stream" aria-label="Mensajes de la conversación">
+                    <div class="message-date"><span>Hoy · 12 de marzo</span></div>
+                    <div class="message-group received-group">
+                        <span class="message-author">June</span>
+                        <div class="message-bubble">¡Hola! ¿Vas a estudiar en la biblioteca después de clase?</div>
+                        <time>12:34</time>
+                    </div>
+                    <div class="message-group sent-group">
+                        <span class="message-author">Tú</span>
+                        <div class="message-bubble">¡Sí! Tengo que repasar para el parcial de genética. ¿Te apuntas?</div>
+                        <time>12:38</time>
+                    </div>
+                    <div class="message-group received-group">
+                        <span class="message-author">June</span>
+                        <div class="message-bubble">¡Claro! ¿Te viene bien en la biblioteca?</div>
+                        <time>12:42</time>
+                    </div>
+                    <div class="thread-prompt">Ya estáis en contacto. ¡Buen estudio!</div>
+                </div>
+
+                <div class="chat-composer">
+                    <input type="text" placeholder="Escribe un mensaje..." aria-label="Escribe un mensaje">
+                    <button type="button" aria-label="Enviar mensaje">Enviar <span aria-hidden="true">↗</span></button>
+                </div>
+            </section>
+        </div>
+    </main>
 
     <!-- FOOTER -->
     <footer id="contact">
